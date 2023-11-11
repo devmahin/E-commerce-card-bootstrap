@@ -1,0 +1,53 @@
+  @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mulish', sans-serif;
+}
+
+:root{
+  --text-color: #4f4f4f;
+}
+p{
+  color: var(--text-color);
+}
+.shirtImg img{
+  max-height: 200px;
+  min-width: 200px;
+  object-fit: cover;
+}
+.card
+{
+  border: none;
+}
+.set-quantity{
+  position: relative;
+}
+.set-quantity::after{
+  content: "(Note, 1 price)";
+  text-align: center;
+  position: absolute;
+  width: auto;
+  height: auto;
+  /* background-color: red; */
+  bottom: -25px;
+  right: 0.7rem;
+}
+
+.page-link:focus{
+  box-shadow: none;
+  background: none;
+
+}
+
+.icon-love p{
+  font-size: 0.9rem;
+  
+}
+.bi-suit-heart-fill:hover{
+  color: red;
+}
+.bi-trash3:hover{
+  color: red;
+}
