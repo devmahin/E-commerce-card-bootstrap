@@ -37,9 +37,9 @@
 
                                         <div class="col-6">
                                                 <ul class="pagination justify-content-end set-quantity">
-                                                    <li class="page-item"><button class="page-link" onclick="MainusProduct()"><i class="bi bi-dash-lg"></i></button></li>
-                                                    <li class="page-item"><input type="button" class="page-link" value="5" id="textbox"></li>
-                                                    <li class="page-item"><button class="page-link" onclick="PlusProduct()"><i class="bi bi-plus"></i></button></li>
+                                                    <li class="page-item"><button class="page-link" onclick="MainusProduct('textbox','price')"><i class="bi bi-dash-lg"></i></button></li>
+                                                    <li class="page-item"><input type="button" class="page-link" value="0" id="textbox"></li>
+                                                    <li class="page-item"><button class="page-link" onclick="PlusProduct('textbox','price')"><i class="bi bi-plus"></i></button></li>
                                                 </ul>
                                         </div>
                                     </div>
@@ -49,7 +49,7 @@
                                             <p><i class="bi bi-suit-heart-fill"></i> Move the wish list</p>
                                         </div>
                                         <div class="col-4 icon-love">
-                                            <p class="h4 money d-flex align-items-center justify-content-end"> $00</p>
+                                            <p class="h4 money d-flex align-items-center justify-content-end">$<span id="price">000</span></p>
                                         </div>
                                     </div>  
                                 </div>
@@ -76,10 +76,9 @@
 
                                         <div class="col-6">
                                                 <ul class="pagination justify-content-end set-quantity">
-                                                    <li class="page-item"><button class="page-link d-flex align-items-center align-aitems-center" onclick="MainusProduct()"><i class="bi bi-dash-lg"></i></button></li>
-                                                    
-                                                    <li class="page-item"><input type="button" class="page-link d-flex align-items-center" value="5" id="textbox"></li>
-                                                    <li class="page-item"><button class="page-link d-flex align-items-center" onclick="PlusProduct()"><i class="bi bi-plus"></i></button></li>
+                                                    <li class="page-item"><button class="page-link d-flex align-items-center align-aitems-center" onclick="MainusProduct('textbox1','price1')"><i class="bi bi-dash-lg"></i></button></li>
+                                                    <li class="page-item"><input type="button" class="page-link d-flex align-items-center" value="0" id="textbox1"></li>
+                                                    <li class="page-item"><button class="page-link d-flex align-items-center" onclick="PlusProduct('textbox1','price1')"><i class="bi bi-plus"></i></button></li>
                                                 </ul>
                                         </div>
                                     </div>
@@ -89,7 +88,7 @@
                                             <p><i class="bi bi-suit-heart-fill"></i> Move the wish list</p>
                                         </div>
                                         <div class="col-4 icon-love">
-                                            <p class="h4 money d-flex align-items-center justify-content-end"> $00</p>
+                                            <p class="h4 money d-flex align-items-center justify-content-end">$<span id="price1">000</span></p>
                                         </div>
                                     </div>  
                                 </div>
@@ -102,16 +101,16 @@
                             <p class="h4">The total ammount of</p>
                             <div class="p_ammount d-flex justify-content-between">
                                 <p>product Ammount</p>
-                                <p>$15</p>
+                                <p>$<span id="totalammount">00</span></p>
                             </div>
                             <div class="p_charge d-flex justify-content-between">
                                 <p>Delivary charge</p>
-                                <p>$55</p>
+                                <p>$ <span id="charge">50</span></p>
                             </div>
                             <hr/>
                             <div class="total_ammount d-flex justify-content-between fw-bold">
                                 <p class="font-weight-bold">The total ammount of (including VAT)</p>
-                                <p class="total-amount-card">$ 0.00</p>
+                                <p>$<span id="total-amount-vat">00.0</span></p>
                             </div>
                             <button class="btn btn-danger">CHECK OUT</button>
                         </div>
@@ -124,12 +123,12 @@
 
                               <div class="collapse mt-3" id="collapseExample">
                                 <div class="card-body">
-                                  <input type="text" class="form-control">
-                                  <small class="ms-2 fw-bold">
-                                    code is mahin
+                                  <input type="text" class="form-control" id="dis_code">
+                                  <small class="ms-2 fw-bold " id="erroeTrw">
+                                    code is (mahin)
                                   </small>
                                 </div>
-                                <button class="btn btn-danger mt-2 px-4">Apply</button>
+                                <button class="btn btn-danger mt-2 px-4" onclick="discountCode()">Apply</button>
                               </div>
                         </div>
 
